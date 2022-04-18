@@ -61,7 +61,8 @@ class Data:
         for post in posts:
             if query.lower() in post['content'].lower():
                 post_list.append(post)
-        return post_list
+        return post_list[:10]
+
 
     def get_post_by_pk(self, pk):
         """возвращает один пост по его идентификатору"""
